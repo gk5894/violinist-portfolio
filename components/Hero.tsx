@@ -21,23 +21,40 @@ export default function Hero({ settings }: HeroProps) {
   const nameParts = name.split(' ');
 
   return (
-    <section className="relative min-h-screen md:h-screen flex items-center overflow-hidden bg-charcoal">
+    {/* Mobile: h-auto so no empty black space. Desktop: full screen */}
+    <section className="relative overflow-hidden bg-charcoal md:h-screen md:flex md:items-center">
 
-      {/* Portrait image */}
-      <div className="absolute inset-y-0 right-0 w-full md:w-[75%] lg:w-[70%]">
+      {/* Mobile image — natural flow, portrait height */}
+      <div className="relative w-full aspect-[3/4] md:hidden">
         <Image
           src={heroSrc}
           alt={`${name} — Hero`}
           fill
           priority
           className="object-cover object-top"
-          sizes="(max-width:768px) 100vw, 72vw"
+          sizes="100vw"
         />
-        {/* Bottom fade — desktop only */}
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-charcoal via-transparent to-charcoal/20" />
+        {/* Mobile bottom fade so text reads over image */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to top, #0F0F0F 22%, rgba(15,15,15,0.5) 42%, transparent 62%)' }}
+        />
       </div>
 
-      {/* Desktop: smooth left-to-right gradient */}
+      {/* Desktop image — absolutely fills section */}
+      <div className="hidden md:block absolute inset-y-0 right-0 w-[75%] lg:w-[70%]">
+        <Image
+          src={heroSrc}
+          alt={`${name} — Hero`}
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="72vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/20" />
+      </div>
+
+      {/* Desktop left gradient */}
       <div
         className="absolute inset-0 pointer-events-none hidden md:block"
         style={{
@@ -45,16 +62,8 @@ export default function Hero({ settings }: HeroProps) {
         }}
       />
 
-      {/* Mobile: very light bottom gradient only — face stays clear */}
-      <div
-        className="absolute inset-0 pointer-events-none md:hidden"
-        style={{
-          background: 'linear-gradient(to top, #0F0F0F 28%, rgba(15,15,15,0.6) 45%, transparent 65%)',
-        }}
-      />
-
-      {/* Content — on mobile pinned to bottom of image, on desktop centered */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-[55vw] md:mt-0 pb-16 md:pb-0">
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 -mt-24 md:mt-0 pb-10 md:pb-0">
         <motion.p
           initial={{ opacity: 0, letterSpacing: '0.6em' }}
           animate={{ opacity: 1, letterSpacing: '0.3em' }}
