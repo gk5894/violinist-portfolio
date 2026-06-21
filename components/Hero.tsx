@@ -21,9 +21,9 @@ export default function Hero({ settings }: HeroProps) {
   const nameParts = name.split(' ');
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-charcoal">
+    <section className="relative min-h-screen md:h-screen flex items-center overflow-hidden bg-charcoal">
 
-      {/* Portrait image — wide, bleeds across most of the screen */}
+      {/* Portrait image */}
       <div className="absolute inset-y-0 right-0 w-full md:w-[75%] lg:w-[70%]">
         <Image
           src={heroSrc}
@@ -33,8 +33,8 @@ export default function Hero({ settings }: HeroProps) {
           className="object-cover object-top"
           sizes="(max-width:768px) 100vw, 72vw"
         />
-        {/* Bottom fade */}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/20" />
+        {/* Bottom fade — desktop only */}
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-charcoal via-transparent to-charcoal/20" />
       </div>
 
       {/* Desktop: smooth left-to-right gradient */}
@@ -45,16 +45,16 @@ export default function Hero({ settings }: HeroProps) {
         }}
       />
 
-      {/* Mobile: bottom-up gradient only — keeps face visible, text readable */}
+      {/* Mobile: very light bottom gradient only — face stays clear */}
       <div
         className="absolute inset-0 pointer-events-none md:hidden"
         style={{
-          background: 'linear-gradient(to top, #0F0F0F 30%, rgba(15,15,15,0.5) 55%, transparent 75%)',
+          background: 'linear-gradient(to top, #0F0F0F 28%, rgba(15,15,15,0.6) 45%, transparent 65%)',
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 absolute bottom-0 md:relative md:bottom-auto pb-16 md:pb-0 pt-0 md:pt-0">
+      {/* Content — on mobile pinned to bottom of image, on desktop centered */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-[55vw] md:mt-0 pb-16 md:pb-0">
         <motion.p
           initial={{ opacity: 0, letterSpacing: '0.6em' }}
           animate={{ opacity: 1, letterSpacing: '0.3em' }}
