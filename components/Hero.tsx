@@ -15,7 +15,7 @@ const LOCAL_HERO = '/hero.jpg';
 export default function Hero({ settings }: HeroProps) {
   const heroSrc = settings?.heroImage ? urlFor(settings.heroImage).width(1200).url() : LOCAL_HERO;
   const name = settings?.name || 'Marina Alba'; // SWAP: siteSettings.name
-  const tagline = settings?.tagline || 'Violinist'; // SWAP: siteSettings.tagline
+  const tagline = settings?.tagline || 'Violinist and Vocalist'; // SWAP: siteSettings.tagline
 
   // Split name for staggered line animation
   const nameParts = name.split(' ');
