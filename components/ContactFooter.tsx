@@ -78,12 +78,6 @@ export default function ContactFooter({ settings }: Props) {
 
             {/* Social links */}
             <div className="flex gap-5">
-              {instagramUrl && (
-                <a href={instagramUrl} target="_blank" rel="noopener noreferrer"
-                   className="font-sans text-xs tracking-widest uppercase text-text-muted hover:text-gold transition-colors">
-                  Instagram
-                </a>
-              )}
               {youtubeUrl && (
                 <a href={youtubeUrl} target="_blank" rel="noopener noreferrer"
                    className="font-sans text-xs tracking-widest uppercase text-text-muted hover:text-gold transition-colors">
