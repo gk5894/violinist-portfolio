@@ -7,10 +7,9 @@ interface Props { settings: SiteSettings | null; }
 
 export default function ContactFooter({ settings }: Props) {
   // SWAP: replace placeholder contact info with siteSettings fields
-  const email = settings?.email || 'booking@marinaAlba.com';
-  const phone = settings?.phone || '+1 (212) 555-0148';
-  const city = settings?.city || 'New York / International';
-  const instagramUrl = settings?.instagramUrl;
+  const email = settings?.email || 'marinaalbav@gmail.com';
+  const city = settings?.city || 'New York / Madrid';
+  const instagramUrl = settings?.instagramUrl || 'https://www.instagram.com/marinaalbamusic/';
   const youtubeUrl = settings?.youtubeUrl;
 
   // Formspree contact form
@@ -66,9 +65,9 @@ export default function ContactFooter({ settings }: Props) {
                 </a>
               </div>
               <div>
-                <p className="font-sans text-xs tracking-widest uppercase text-text-muted mb-1">Phone</p>
-                <a href={`tel:${phone}`} className="font-sans text-off-white hover:text-gold transition-colors">
-                  {phone}
+                <p className="font-sans text-xs tracking-widest uppercase text-text-muted mb-1">Instagram</p>
+                <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="font-sans text-off-white hover:text-gold transition-colors">
+                  @marinaalbamusic
                 </a>
               </div>
               <div>
