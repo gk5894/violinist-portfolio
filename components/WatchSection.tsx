@@ -6,11 +6,16 @@ import SectionWrapper from './SectionWrapper';
 
 interface Props { videos: YoutubeVideo[] | null; }
 
-// PLACEHOLDER videos — replace via Sanity Studio (youtubeVideo documents)
 const PLACEHOLDER: YoutubeVideo[] = [
-  { _id: '1', title: 'Brahms Violin Concerto — Berlin Philharmonic', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', description: 'Live recording from the Berliner Philharmonie', date: '2024-03-15', order: 1 },
-  { _id: '2', title: 'Bach Chaconne — Solo Recital', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', description: 'Carnegie Hall, April 2024', date: '2024-04-02', order: 2 },
-  { _id: '3', title: 'Sibelius Violin Concerto — Vienna', youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', description: 'With the Vienna Philharmonic, Musikverein', date: '2024-05-18', order: 3 },
+  { _id: '1', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=-62dUZynG9g', description: '', order: 1 },
+  { _id: '2', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=bCMMs9EchdQ', description: '', order: 2 },
+  { _id: '3', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=PnSIC-nh2JU', description: '', order: 3 },
+  { _id: '4', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=rTKMlDYbiUc', description: '', order: 4 },
+  { _id: '5', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=DhzMH0XLnNQ', description: '', order: 5 },
+  { _id: '6', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=Ue-6klvhRGk', description: '', order: 6 },
+  { _id: '7', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=VZcBQ_5l9NY', description: '', order: 7 },
+  { _id: '8', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=_ihGLWE_k5w', description: '', order: 8 },
+  { _id: '9', title: '', youtubeUrl: 'https://www.youtube.com/watch?v=_KcG27nQtgE', description: '', order: 9 },
 ];
 
 function extractYouTubeId(url: string): string | null {
