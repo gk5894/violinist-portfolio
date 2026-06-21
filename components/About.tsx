@@ -6,10 +6,11 @@ import { urlFor } from '@/lib/sanity.image';
 
 interface Props { bio: Bio | null; }
 
-// PLACEHOLDER bio — swap by editing Bio document in Sanity Studio
-const PLACEHOLDER_BIO = `Marina Alba is an internationally acclaimed violinist whose performances have graced the world's most prestigious concert halls, from Carnegie Hall to the Vienna Musikverein. Trained at the Juilliard School under Itzhak Perlman, she has won top prizes at the Queen Elisabeth Competition and the Menuhin International Violin Competition.
+const PLACEHOLDER_BIO = `Marina Alba is a classical and jazz violinist and vocalist from Madrid, Spain. She is currently pursuing her Master of Music at the Manhattan School of Music in New York City as part of the prestigious Pinchas Zukerman Performance Program — one of the most competitive chamber music fellowships in the world.
 
-Known for her distinctive tone and deeply communicative interpretations, Elena brings an uncompromising musicality to everything from the Baroque to contemporary world premieres. Off stage, she is passionate about music education and runs an annual masterclass series for young string players.`;
+Marina completed her undergraduate studies at the Indiana University Jacobs School of Music, graduating summa cum laude in 2024. Equally at home on the concert stage and in the jazz club, she brings a rare versatility to her artistry — weaving together the precision of classical training with the spontaneity and warmth of jazz.
+
+Originally from Madrid, Marina has performed across the United States and Europe, captivating audiences with her expressive tone, musical intelligence, and commanding stage presence.`;
 
 // PLACEHOLDER images — replace via Sanity Studio
 const PLACEHOLDER_HEADSHOT = '/about-headshot.jpg';
