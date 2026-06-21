@@ -103,16 +103,6 @@ export default function Hero({ settings }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-6 md:left-12 flex items-center gap-3 text-text-muted"
-      >
-        <div className="w-8 h-px bg-text-muted" />
-        <span className="font-sans text-[10px] tracking-[0.2em] uppercase">Scroll</span>
-      </motion.div>
     </section>
   );
 }
