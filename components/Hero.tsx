@@ -21,7 +21,6 @@ export default function Hero({ settings }: HeroProps) {
   const nameParts = name.split(' ');
 
   return (
-    {/* Mobile: h-auto so no empty black space. Desktop: full screen */}
     <section className="relative overflow-hidden bg-charcoal md:h-screen md:flex md:items-center">
 
       {/* Mobile image — natural flow, portrait height */}
