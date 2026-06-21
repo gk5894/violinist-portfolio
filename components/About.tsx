@@ -12,7 +12,7 @@ const PLACEHOLDER_BIO = `Marina Alba is an internationally acclaimed violinist w
 Known for her distinctive tone and deeply communicative interpretations, Elena brings an uncompromising musicality to everything from the Baroque to contemporary world premieres. Off stage, she is passionate about music education and runs an annual masterclass series for young string players.`;
 
 // PLACEHOLDER images — replace via Sanity Studio
-const PLACEHOLDER_HEADSHOT = 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80';
+const PLACEHOLDER_HEADSHOT = '/about-headshot.jpg';
 const PLACEHOLDER_SECONDARY = 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80';
 
 export default function About({ bio }: Props) {
