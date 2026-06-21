@@ -35,10 +35,6 @@ export default function About({ bio }: Props) {
           <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden">
             <Image src={headshotSrc} alt="Marina Alba" fill className="object-cover" sizes="(max-width:768px) 100vw, 50vw" />
           </div>
-          {/* Offset secondary image */}
-          <div className="absolute -bottom-10 -right-6 md:-right-10 w-2/5 aspect-square rounded-sm overflow-hidden border-4 border-charcoal shadow-2xl">
-            <Image src={secondarySrc} alt="Performing" fill className="object-cover" sizes="200px" />
-          </div>
           {/* Gold accent line */}
           <div className="absolute -top-6 -left-4 w-px h-24 bg-gold opacity-60" />
         </motion.div>
