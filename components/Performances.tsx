@@ -10,9 +10,9 @@ interface Props { performances: Performance[] | null; }
 const PLACEHOLDER: Performance[] = [
   { _id: '1', title: 'Brahms Violin Concerto', description: 'With the Berlin Philharmonic Orchestra, conducted by Klaus Mäkelä.', venueName: 'Berliner Philharmonie', cityCountry: 'Berlin, Germany', dates: ['2025-03-15T19:30:00Z'], ticketUrl: '#', featuredImage: null, status: 'upcoming', order: 1 },
   { _id: '2', title: 'Solo Recital: Bach & Bartók', description: 'A programme spanning 300 years of violin writing, from Bach Partitas to Bartók Solo Sonata.', venueName: 'Carnegie Hall', cityCountry: 'New York, USA', dates: ['2025-04-02T20:00:00Z', '2025-04-03T15:00:00Z'], ticketUrl: '#', featuredImage: null, status: 'upcoming', order: 2 },
-  { _id: '3', title: 'Sibelius Violin Concerto', description: 'Opening night of the season with the Vienna Philharmonic.', venueName: 'Musikverein', cityCountry: 'Vienna, Austria', dates: ['2025-05-18T19:00:00Z'], ticketUrl: null, featuredImage: null, status: 'upcoming', order: 3 },
-  { _id: '4', title: 'Tchaikovsky Violin Concerto', description: 'With the London Symphony Orchestra.', venueName: 'Barbican Centre', cityCountry: 'London, UK', dates: ['2024-11-10T19:30:00Z'], ticketUrl: null, featuredImage: null, status: 'past', order: 4 },
-  { _id: '5', title: 'Prokofiev Sonatas', description: 'Chamber recital with pianist Maria Joăo Pires.', venueName: 'Paris Philharmonie', cityCountry: 'Paris, France', dates: ['2024-10-22T20:00:00Z'], ticketUrl: null, featuredImage: null, status: 'past', order: 5 },
+  { _id: '3', title: 'Sibelius Violin Concerto', description: 'Opening night of the season with the Vienna Philharmonic.', venueName: 'Musikverein', cityCountry: 'Vienna, Austria', dates: ['2025-05-18T19:00:00Z'], ticketUrl: undefined, featuredImage: null, status: 'upcoming', order: 3 },
+  { _id: '4', title: 'Tchaikovsky Violin Concerto', description: 'With the London Symphony Orchestra.', venueName: 'Barbican Centre', cityCountry: 'London, UK', dates: ['2024-11-10T19:30:00Z'], ticketUrl: undefined, featuredImage: null, status: 'past', order: 4 },
+  { _id: '5', title: 'Prokofiev Sonatas', description: 'Chamber recital with pianist Maria Joăo Pires.', venueName: 'Paris Philharmonie', cityCountry: 'Paris, France', dates: ['2024-10-22T20:00:00Z'], ticketUrl: undefined, featuredImage: null, status: 'past', order: 5 },
 ];
 
 function formatDate(iso: string) {
